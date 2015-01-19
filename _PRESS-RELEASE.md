@@ -1,5 +1,5 @@
 # Project Name #
->Treeify.
+>Earworm
 
 <!--
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -18,32 +18,37 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Heading ##
-  >Treeify allows you to watch a DOM tree construct itself.
+  >The music player for people who listen to single youtube songs, on repeat, forever.
 
 ## Sub-Heading ##
-  > Market: People who know what a DOM tree is.
-  > Benefit: Get to watch a tree get built.
+  > Market: People who listen to single songs on repeat. Use case: listening to a single song while working, song changes at a low frequency. Next song must be on repeat.
+  > Competition: listenonrepeat.com
+  > Benefit: Load a page, listen to a single song on repeat. No ads, no need to click autorepeat.Maybe discover other songs.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > Listen to a song on repeat.
 
-## Problem ##
-  > Describe the problem your product solves.
+## Problem #
+  > Current youtube experience not optimized for listening to a single song on repeat.
+  Ads. Comments. Videos unlikely to be other songs you'd like to repeat for hours.
+  > Transition experience to the next song when you get bored is distracting. Comments. Etc.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > User experience is centered on experience of single song in background.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > I like to work while listening to songs on repeat.
+  > When I get bored of a song, I want to pick the next one, but with minimal effort.
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Go to a webpage, select a video, listen forever on repeat. Have nothing else going on.
+  > When you get bored, there are hotkeys to allow you to quickly select the next song.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > Baby monkey riding backwards on a pig.
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > ???
 # Project Name #
 Treeify
 ## Heading ##
