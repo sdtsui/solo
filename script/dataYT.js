@@ -67,7 +67,7 @@ var makeYouTubeQuery = function(id, key){
   //Example id: 5rOiW_xY-kc ; for REM song
   //example Key: "AIzaSyAXV9k7GK2rPUcGob1B4vDrAuzDrCoYgFo"
   var queryString = "https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=";
-  queryString += id +"&max-results=20&type=video&key=" + key;
+  queryString += id +"&maxResults=20&type=video&key=" + key;
   return queryString;
 }
 
@@ -103,6 +103,7 @@ var constructYouTubeTree = function(ytID, breadth, depth){
             console.log('received data, of type : ', typeof data);
             var response = data;
             var items = response.items;
+            console.log('ITEM LENGTH :', items.length);
             var parentLocation = NODES.length-1;
             var childLocation = parentLocation+1;
             for (var i = 0 ; i < breadth; i++){
