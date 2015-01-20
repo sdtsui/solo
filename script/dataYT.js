@@ -179,7 +179,7 @@ var youTubeGlobalRender = function(){
       .style("stroke", function(d) {
         return d3.rgb(fill(d.group)).darker(); })
       //can FILL
-      // .call(force.drag)
+      .call(force.drag)
 // //http://img.youtube.com/vi/2sLRMAkc2aM/3.jpg
       .on('mousedown', function(d){
         console.log('changing playerFrame');
