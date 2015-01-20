@@ -1,20 +1,20 @@
 //Work: Links and nodes.
 
-// var LINKS = [
-//     {"source": 0, "target": 1},
-//     {"source": 0, "target": 2},
-//     {"source": 2, "target": 3},
-//     {"source": 3, "target": 4}
-//   ];
-// var NODES = [
-//     {"vidID": "2sLRMAkc2aM", "title": "song1"},
-//     {"vidID": "MHu8948sDJA", "title": "song2"},
-//     {"vidID": "3EyHnYFkaWc", "title": "song3"},
-//     {"vidID": "OBl4pp0Sfko", "title": "song34"},
-//     {"vidID": "Qg-nIAnUZwE", "title": "song5"}
-//   ];
-var LINKS = [];
-var NODES = [];
+var LINKS = [
+    {"source": 0, "target": 1},
+    {"source": 0, "target": 2},
+    {"source": 2, "target": 3},
+    {"source": 3, "target": 4}
+  ];
+var NODES = [
+    {"vidID": "2sLRMAkc2aM", "title": "song1"},
+    {"vidID": "MHu8948sDJA", "title": "song2"},
+    {"vidID": "3EyHnYFkaWc", "title": "song3"},
+    {"vidID": "OBl4pp0Sfko", "title": "song34"},
+    {"vidID": "Qg-nIAnUZwE", "title": "song5"}
+  ];
+// var LINKS = [];
+// var NODES = [];
 
 var addPatterns = function(NODES){//loop over Nodes
   //jquery select #mySvg
@@ -29,13 +29,21 @@ var addPatterns = function(NODES){//loop over Nodes
   //
   //
   //breaout
-  // for (var i = 0 ; i < NODES.length; i++){
-  //   //make a new pattern
-  //   var rawHTML = "";
-  //   rawHTML += "<pattern id="+NODES[i].id+" x="0" y="0" height="90" width="125">
-  //         <image x="0" y="0" width="125" height="90" xlink:href="+imageQuery...
-  // }
+  var el = $('#patternBox');
+  var allPatterns = "";
+  for (var i = 0 ; i < NODES.length; i++){
+    //make a new pattern
+    var HTMLpattern = "<pattern id="+NODES[i].vidID+" x='0' y='0' height='90' width='125'>"+
+          "<image x='0' y='0' width='125' height='90' xlink:href="+imageQuery(NODES[i].vidID)+
+          "></image></pattern>";
+    allPatterns += HTMLpattern;
+  }
+  $(el).html(allPatterns);
 }
+
+var imageQuery = function(id){
+  return "http://img.youtube.com/vi/"+id+"/0.jpg"
+};
 
 var makeLink = function(source, target){
   //accepts numbers
@@ -63,9 +71,6 @@ var makeYouTubeQuery = function(id, key){
   return queryString;
 }
 
-var imageQuery = function(id){
-  return "http://img.youtube.com/vi/"+id+"/0.jpg"
-};
 
 
 var constructYouTubeTree = function(ytID, breadth, depth){
