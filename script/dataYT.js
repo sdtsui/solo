@@ -1,3 +1,4 @@
+jQuery.ajaxSetup({async:false});
 //Work: Links and nodes.
 //clientside testing;
 // var LINKS = [
