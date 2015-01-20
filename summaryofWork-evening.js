@@ -3,7 +3,11 @@ godaddy
 https://dashboard.heroku.com/apps/secure-wildwood-6905/settings
 secure-wildwood-6905.herokuapps.com
 
+https://git.heroku.com/secure-wildwood-6905.git
+forms: verifying deploy
 
+cmd: git push heroku master
+//
 https://www.youtube.com/watch?v=5rOiW_xY-kc
 
 5rOiW_xY-kc
