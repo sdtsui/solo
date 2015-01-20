@@ -116,7 +116,7 @@ var constructYouTubeTree = function(ytID, breadth, depth){
             }
           })
           .done(function() {
-            console.log( "second success" );
+            console.log( "successly called .done" );
           })
           .fail(function() {
             console.log( "error" );
@@ -161,7 +161,12 @@ var youTubeGlobalRender = function(){
   var node = svg.selectAll("circle")
       .data(NODES)
       .enter().append("svg:circle")
-      .attr("fill", "url(#image1)")
+      // .attr("fill", "url(#image1)")
+      .attr("fill", function(d){
+        console.log("d.vidID: ", d.vidID);
+        var id = d.vidID;
+        return "url(#"+id+")"
+      })
       .attr("r", 38)
       .style("border-radius", "10px")
       .style("stroke", function(d) {
