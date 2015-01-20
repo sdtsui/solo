@@ -1,5 +1,5 @@
 # Project Name #
->Earworm
+>Treeify2
 
 <!--
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -18,40 +18,14 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Heading ##
-  >The music player for people who listen to single youtube songs, on repeat, forever.
+  >Uses the youtube API to draw a simple graph of recommended videos, given one video.
 
 ## Sub-Heading ##
-  > Market: People who listen to single songs on repeat. Use case: listening to a single song while working, song changes at a low frequency. Next song must be on repeat.
-  > Competition: listenonrepeat.com
-  > Benefit: Load a page, listen to a single song on repeat. No ads, no need to click autorepeat.Maybe discover other songs.
-
+  >Market: 
+  >Benefit: Look at videos. Play videos. Be amazed.
 ## Summary ##
-  > Listen to a song on repeat.
-
-## Problem #
-  > Current youtube experience not optimized for listening to a single song on repeat.
-  Ads. Comments. Videos unlikely to be other songs you'd like to repeat for hours.
-  > Transition experience to the next song when you get bored is distracting. Comments. Etc.
-
-## Solution ##
-  > User experience is centered on experience of single song in background.
-
-## Quote from You ##
-  > I like to work while listening to songs on repeat.
-  > When I get bored of a song, I want to pick the next one, but with minimal effort.
+  > Load a number of videos.
 
 ## How to Get Started ##
-  > Go to a webpage, select a video, listen forever on repeat. Have nothing else going on.
-  > When you get bored, there are hotkeys to allow you to quickly select the next song.
+  > treeify2.sdtsui.com
 
-## Customer Quote ##
-  > Baby monkey riding backwards on a pig.
-
-## Closing and Call to Action ##
-  > ???
-# Project Name #
-Treeify
-## Heading ##
-
-
-## Sub-Heading ##
