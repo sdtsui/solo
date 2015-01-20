@@ -88,7 +88,17 @@ var constructYouTubeTree = function(ytID, breadth, depth){
               LINKS.push(makeLink(parentLocation,childLocation));
               childLocation++;
             }
+          })
+          .done(function() {
+            console.log( "second success" );
+          })
+          .fail(function() {
+            console.log( "error" );
+          })
+          .always(function() {
+            console.log( "finished" );
           });
+
         }
       }
       queryQueue.shift();
