@@ -13,27 +13,29 @@ var svg = d3.select("body").append("svg:svg")
     .attr("height", h);
 
 d3.json("testGraph.json", function(json) {
+
   var link = svg.selectAll("line")
       .data(json.links)
     .enter().append("svg:line");
 
+
+    // svg.append('circle').attr('fill', 'url(#image1)')
+    // .attr('cx', 85)
+    // .attr('cy', 85)
+    // .attr('r', 38);
+
   var node = svg.selectAll("circle")
       .data(json.nodes)
-    .enter().append("svg:circle")
-      .attr("r", r+100)
-      .style("border-radius", "5px")
-      .style("fill", "transparent")
-      .style("fill", function(d) { return fill(d.group); })
+      .enter().append("svg:circle")
+      .attr("fill", "url(#image1)")
+      .attr("r", 38)
+      .style("border-radius", "10px")
       .style("stroke", function(d) { 
         console.log("d:", d);
         console.log('d.group:', d.group);
         return d3.rgb(fill(d.group)).darker(); })//can FILL
       .call(force.drag)
-     .on("mouseover", function(){ // when I use .style("fill", "red") here, it works 
-                   d3.select(this)
-                       .style("fill", "red");
-             })
-//http://img.youtube.com/vi/2sLRMAkc2aM/3.jpg
+// //http://img.youtube.com/vi/2sLRMAkc2aM/3.jpg
 
   force
       .nodes(json.nodes)
