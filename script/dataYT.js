@@ -116,7 +116,7 @@ var constructYouTubeTree = function(ytID, breadth, depth){
             }
           })
           .done(function() {
-            console.log( "successly called .done" );
+            console.log( "successfully called .done" );
           })
           .fail(function() {
             console.log( "error" );
@@ -138,6 +138,9 @@ var constructYouTubeTree = function(ytID, breadth, depth){
 
 //Global Construct Task:
 var youTubeGlobalRender = function(){
+  //make a call to NODES;
+
+  addPatterns(NODES);
 
   var w = 960,
       h = 500,
@@ -149,9 +152,11 @@ var youTubeGlobalRender = function(){
       .linkDistance(200)//distance of links?
       .size([w, h]);
 
-  var svg = d3.select("body").append("svg:svg")
+  // var svg = d3.select("body").append("svg:svg")
+  var svg = d3.select("#patternBox")
       .attr("width", w)
       .attr("height", h);
+  // var svg = $('#patternBox');
 //link appending
   var link = svg.selectAll("line")
     .data(LINKS)
@@ -170,9 +175,15 @@ var youTubeGlobalRender = function(){
       .attr("r", 38)
       .style("border-radius", "10px")
       .style("stroke", function(d) {
-        return d3.rgb(fill(d.group)).darker(); })//can FILL
+        return d3.rgb(fill(d.group)).darker(); })
+      //can FILL
       // .call(force.drag)
 // //http://img.youtube.com/vi/2sLRMAkc2aM/3.jpg
+      .on('mousedown', function(d){
+        console.log('changing playerFrame');
+        $('#playerFrame')
+        .attr('src', "//www.youtube.com/embed/"+d.vidID);
+      })
 
   force
       .nodes(NODES)

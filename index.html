@@ -8,7 +8,6 @@
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.1/d3.min.js"></script>
    <style type="text/css">
-
   circle {
     stroke-width: 5px;
   }
@@ -16,33 +15,29 @@
   line {
     stroke: #999;
   }
-
     </style>
   </head>
   <body>
     <svg id="patternBox" width="480" height="270">
-        <pattern id="image1" x="0" y="0" height="90" width="125">
+<!--         <pattern id="image1" x="0" y="0" height="90" width="125">
           <image x="0" y="0" width="125" height="90" xlink:href="http://img.youtube.com/vi/2sLRMAkc2aM/0.jpg"></image>
         </pattern>
-        <!--     <div id='head'>
+ -->        <!--     <div id='head'>
       Canvas<input id='bgcolor' type='color'></input>
       Leaf<input id='leafcolor' type='color'></input>
       Branch<input id='branchcolor' type='color'></input>
       Size  <input id='size' type='number'></input>
     </div>
  -->
- <h1>Treeify2</h1>
+ <h1>Treeify2:return of the tree<br>(not really a tree anymore)</h1>
     <input id='url' value='https://www.youtube.com/watch?v='></input><br>
-    <div id='main'></div>
-    <div>TESTING BELOW</div>
-
     <footer>
       Check us out at:<br>
       <a href='https://chikeichan.wordpress.com' target='_blank'>Jacky's Blog</a>
       <a href='https://szehungtsui.wordpress.com' target='_blank'>Daniel's Blog</a>
-      <div>TESTING ABOVE</div>
     </footer>
-
+    <!-- Player dimensions must be tiny: 480/270 -->
+    <iframe id="playerFrame" width="480" height="270" src="//www.youtube.com/embed/2XG_0iV2B40" frameborder="0" allowfullscreen></iframe>
   </body>
   <!-- <script src = "d3testLayout.js"></script> -->
   <script src="script/dataYT.js"></script>
