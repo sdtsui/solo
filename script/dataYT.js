@@ -74,8 +74,8 @@ var constructYouTubeTree = function(ytID, breadth, depth){
           var currentQueryString = makeYouTubeQuery(nextNode['id'],KEYTHINGY);
           $.get(currentQueryString, function(data){
             //REAL FUNCTION;
-            console.log('received json data', data);
-            var response = JSON.parse(data);
+            console.log('received data, of type : ', typeof data);
+            var response = data;
             var items = response.items;
             var parentLocation = NODES.length-1;
             var childLocation = parentLocation+1;
