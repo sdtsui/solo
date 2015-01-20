@@ -19,6 +19,7 @@ $('input.DP').on('keydown',function(e){
 
 		console.log(id, breadth, depth);
 		console.log(typeof id, typeof breadth, typeof depth);
+		
 		constructYouTubeTree(id, breadth, depth);
 
 		setTimeout(function(){

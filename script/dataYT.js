@@ -1,20 +1,20 @@
 //Work: Links and nodes.
-
-var LINKS = [
-    {"source": 0, "target": 1},
-    {"source": 0, "target": 2},
-    {"source": 2, "target": 3},
-    {"source": 3, "target": 4}
-  ];
-var NODES = [
-    {"vidID": "2sLRMAkc2aM", "title": "song1"},
-    {"vidID": "MHu8948sDJA", "title": "song2"},
-    {"vidID": "3EyHnYFkaWc", "title": "song3"},
-    {"vidID": "OBl4pp0Sfko", "title": "song34"},
-    {"vidID": "Qg-nIAnUZwE", "title": "song5"}
-  ];
-// var LINKS = [];
-// var NODES = [];
+//clientside testing;
+// var LINKS = [
+//     {"source": 0, "target": 1},
+//     {"source": 0, "target": 2},
+//     {"source": 2, "target": 3},
+//     {"source": 3, "target": 4}
+//   ];
+// var NODES = [
+//     {"vidID": "2sLRMAkc2aM", "title": "song1"},
+//     {"vidID": "MHu8948sDJA", "title": "song2"},
+//     {"vidID": "3EyHnYFkaWc", "title": "song3"},
+//     {"vidID": "OBl4pp0Sfko", "title": "song34"},
+//     {"vidID": "Qg-nIAnUZwE", "title": "song5"}
+//   ];
+var LINKS = [];
+var NODES = [];
 
 var addPatterns = function(NODES){//loop over Nodes
   //jquery select #mySvg
@@ -185,22 +185,22 @@ var youTubeGlobalRender = function(){
         .attr('src', "//www.youtube.com/embed/"+d.vidID);
       })
 
-  // force
-  //     .nodes(NODES)
-  //     .links(LINKS)
-  //     .on("tick", tick)
-  //     .start();
+  force
+      .nodes(NODES)
+      .links(LINKS)
+      .on("tick", tick)
+      .start();
 
   function tick(e) {
 
-    Push sources up and targets down to form a weak tree.
-    ****
-    var k = 6 * e.alpha;
-    json.links.forEach(function(d, i) {
-      d.source.y -= k;
-      d.target.y += k;
-    });
-    ****
+    // Push sources up and targets down to form a weak tree.
+    // ****
+    // var k = 6 * e.alpha;
+    // json.links.forEach(function(d, i) {
+    //   d.source.y -= k;
+    //   d.target.y += k;
+    // });
+    // ****
 
     //assigns node locations
     node.attr("cx", function(d) { return d.x; })
