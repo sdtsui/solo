@@ -16,6 +16,18 @@
 var LINKS = [];
 var NODES = [];
 
+var addPatterns = function(NODES){//loop over Nodes
+  //jquery select #mySvg
+  //create pattern based on this template
+  /*
+  <pattern id="image1" x="0" y="0" height="90" width="125">
+          <image x="0" y="0" width="125" height="90" xlink:href="http://img.youtube.com/vi/2sLRMAkc2aM/0.jpg"></image>
+        </pattern>
+   */
+  //append it to svg, with id = vidID
+  //href will be the result of a call to imageQuery;
+}
+
 var makeLink = function(source, target){
   //accepts numbers
   if (typeof source !== 'number' || typeof target !== 'number'){
@@ -81,7 +93,7 @@ var constructYouTubeTree = function(ytID, breadth, depth){
             var childLocation = parentLocation+1;
             for (var i = 0 ; i < breadth; i++){
               queryQueue.push({
-                'id': items[i].id.videoID,
+                'id': items[i].id.videoId,
                 'title': items[i].snippet.title,
                 'depth': nextNode['depth']+1
               });

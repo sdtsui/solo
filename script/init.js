@@ -11,7 +11,7 @@ $('input#url').on('keydown',function(e){
 	if (e.keyCode === 38){
 		$('div#main').append('<div id="loading">Loading...</div>')
 		console.log('constructing tree');
-		constructYouTubeTree("2sLRMAkc2aM", 3, 1);
+		constructYouTubeTree("2sLRMAkc2aM", 2, 1);
 		$('div#loading').remove()
 	}
 
