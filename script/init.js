@@ -11,15 +11,14 @@ $('input#url').on('keydown',function(e){
 	if (e.keyCode === 38){
 		$('div#main').append('<div id="loading">Loading...</div>')
 		console.log('constructing tree');
-
-
+		constructYouTubeTree("2sLRMAkc2aM", 3, 0);
 		$('div#loading').remove()
 	}
 
 	if (e.keyCode === 40){
 		console.log('rendering awesomeness');
 		$('div#main').append('<div id="loading">Loading...</div>')
-		youtubeGlobalRender();
+		youTubeGlobalRender();
 		//make auth'd get to youtube API, with xml response.
 		$('div#loading').remove()
 	}
