@@ -3,14 +3,13 @@ var svgHeight = svgWidth;
 var allTrees = [];
 var leafCoordinates;
 var rootTree;
-var http = require('http');
 
 //Draw tree when input detected.
 $('input#url').on('keydown',function(e){
 	if (e.keyCode === 40){
 		console.log('posting to youtube?');
 		$('div#main').append('<div id="loading">Loading...</div>')
-		var ytURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=5rOiW_xY-kc&type=video&key=AIzaSyAXV9k7GK2rPUcGob1B4vDrAuzDrCoYgFo"
+		var ytURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=5rOiW_xY-kc&type=video&key=AIzaSyAXV9k7GK2rPUcGob1B4vDrAuzDrCoYgFo";
 		$.get(ytURL, function(data){
 			console.log('data', data);
 		});
