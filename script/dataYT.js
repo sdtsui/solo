@@ -67,7 +67,7 @@ var makeYouTubeQuery = function(id, key){
   //Example id: 5rOiW_xY-kc ; for REM song
   //example Key: "AIzaSyAXV9k7GK2rPUcGob1B4vDrAuzDrCoYgFo"
   var queryString = "https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=";
-  queryString += id +"&type=video&key=" + key;
+  queryString += id +"&max-results=20&type=video&key=" + key;
   return queryString;
 }
 
