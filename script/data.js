@@ -1,6 +1,6 @@
 /**
  * Only called when root node is created.
- * Subsequent nodes are creates with tree.insert. 
+ * Subsequent nodes are creates with tree.insert.
  * @param {[type]} x     [description]
  * @param {[type]} y     [description]
  * @param {[type]} width [description]
@@ -11,7 +11,7 @@ var Tree = function(x, y, width, color){
 	tree.root = {'x': x, 'y': y};
 	tree.height = findRandom(svgWidth*0.05,svgWidth*0.01);
 	tree.width = width;
-	tree.color = color; 
+	tree.color = color;
 	tree.angle = 0; // In degrees.
 	tree.isLeaf = true;
 	tree.children = [];

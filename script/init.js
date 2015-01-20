@@ -4,15 +4,22 @@ var allTrees = [];
 var leafCoordinates;
 var rootTree;
 
+
+
 //Draw tree when input detected.
 $('input#url').on('keydown',function(e){
-	if (e.keyCode === 40){
-		console.log('posting to youtube?');
+	if (e.keyCode === 38){
 		$('div#main').append('<div id="loading">Loading...</div>')
-		var ytURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=5rOiW_xY-kc&type=video&key=AIzaSyAXV9k7GK2rPUcGob1B4vDrAuzDrCoYgFo";
-		$.get(ytURL, function(data){
-			console.log('data', data);
-		});
+		console.log('constructing tree');
+
+
+		$('div#loading').remove()
+	}
+
+	if (e.keyCode === 40){
+		console.log('rendering awesomeness');
+		$('div#main').append('<div id="loading">Loading...</div>')
+		youtubeGlobalRender();
 		//make auth'd get to youtube API, with xml response.
 		$('div#loading').remove()
 	}
@@ -23,7 +30,7 @@ $('input#url').on('keydown',function(e){
 		$.post('/api/url',{query:query},function(data){
 			parsedDOM = $.parseHTML(data);
 			rootTree = Tree(svgWidth/2, svgHeight, svgWidth/200, 'black');
-			rootTree.angle = 0;       
+			rootTree.angle = 0;
 			allTrees = [];
 			allTrees.push(rootTree);
 			$('div#loading').remove()
@@ -67,7 +74,7 @@ var assignLeaves = function(){
 		if(tree.isLeaf){
 			leafCoordinates.push(tree.nextRoot())
 		}
-	})	
+	})
 }
 	/**
 	 * Draws tree in svg based on input arrays.
@@ -107,5 +114,5 @@ var drawTree = function(allTrees, leafCoordinates){
 		.attr('cx',function(d){return d.x})
 		.attr('cy',function(d){return d.y})
 		.attr('r',function(d){return findRandom(svgWidth/200,svgWidth/1000);})
-		.attr('fill',color.leafColor);	
+		.attr('fill',color.leafColor);
 }
