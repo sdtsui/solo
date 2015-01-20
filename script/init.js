@@ -3,7 +3,7 @@ var svgHeight = svgWidth;
 var allTrees = [];
 var leafCoordinates;
 var rootTree;
-
+jQuery.ajaxSetup({async:false});
 
 
 //Draw tree when input detected.
