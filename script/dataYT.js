@@ -185,22 +185,22 @@ var youTubeGlobalRender = function(){
         .attr('src', "//www.youtube.com/embed/"+d.vidID);
       })
 
-  force
-      .nodes(NODES)
-      .links(LINKS)
-      .on("tick", tick)
-      .start();
+  // force
+  //     .nodes(NODES)
+  //     .links(LINKS)
+  //     .on("tick", tick)
+  //     .start();
 
   function tick(e) {
 
-    // Push sources up and targets down to form a weak tree.
-    // ****
-    // var k = 6 * e.alpha;
-    // json.links.forEach(function(d, i) {
-    //   d.source.y -= k;
-    //   d.target.y += k;
-    // });
-    // ****
+    Push sources up and targets down to form a weak tree.
+    ****
+    var k = 6 * e.alpha;
+    json.links.forEach(function(d, i) {
+      d.source.y -= k;
+      d.target.y += k;
+    });
+    ****
 
     //assigns node locations
     node.attr("cx", function(d) { return d.x; })
