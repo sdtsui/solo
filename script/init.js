@@ -3,16 +3,26 @@ var svgHeight = svgWidth;
 var allTrees = [];
 var leafCoordinates;
 var rootTree;
+var http = require('http');
 
 //Draw tree when input detected.
 $('input#url').on('keydown',function(e){
+	if (e.keyCode === 40){
+		console.log('posting to youtube?');
+		$('div#main').append('<div id="loading">Loading...</div>')
+		var ytURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=5rOiW_xY-kc&type=video&key=AIzaSyAXV9k7GK2rPUcGob1B4vDrAuzDrCoYgFo"
+		$.get(ytURL, function(data){
+			console.log('data', data);
+		});
+		//make auth'd get to youtube API, with xml response.
+		$('div#loading').remove()
+	}
 	var query = $(this).val();
 	if(e.keyCode === 13){
 		d3.selectAll('svg').remove();
 		$('div#main').append('<div id="loading">Loading...</div>')
-
 		$.post('/api/url',{query:query},function(data){
-			parsedDOM = $.parseHTML(data);	
+			parsedDOM = $.parseHTML(data);
 			rootTree = Tree(svgWidth/2, svgHeight, svgWidth/200, 'black');
 			rootTree.angle = 0;       
 			allTrees = [];

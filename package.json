@@ -3,6 +3,9 @@
   "description": "Visualizing DOM Tree using D3",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "node": "*",
     "express": "*",
