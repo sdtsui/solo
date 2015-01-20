@@ -26,6 +26,15 @@ var addPatterns = function(NODES){//loop over Nodes
    */
   //append it to svg, with id = vidID
   //href will be the result of a call to imageQuery;
+  //
+  //
+  //breaout
+  // for (var i = 0 ; i < NODES.length; i++){
+  //   //make a new pattern
+  //   var rawHTML = "";
+  //   rawHTML += "<pattern id="+NODES[i].id+" x="0" y="0" height="90" width="125">
+  //         <image x="0" y="0" width="125" height="90" xlink:href="+imageQuery...
+  // }
 }
 
 var makeLink = function(source, target){
