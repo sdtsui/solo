@@ -29,3 +29,7 @@ Once the project moves into development, the press release can be used as a touc
 ## How to Get Started ##
   > treeify2.sdtsui.com
 
+## Random Notes ##
+  > Treeify1 is a SAP that draws a tree based on the structure of a given webpage's DOM.
+  > Treeify2 is a SAP that takes a youtube link and uses youtube's API to draw a graph based on the input's recommended videos.
+  It also allows the user to select and play videos.
