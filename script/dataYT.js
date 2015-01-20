@@ -59,13 +59,17 @@ var constructYouTubeTree = function(ytID, breadth, depth){
     //takes ID and title strings
     //note that depth is tracked in 3rd parameter
     while (queryQueue.length !== 0){
-      console.log('grabbing related videos with GET to : ', queryQueue);
+      console.log(queryQueue.length);
+      console.log('queryQueue : ', queryQueue, queryQueue.length);
       var nextNode = queryQueue[0];
+      console.log(nextNode);
       if(nextNode['depth'] <= depth){
         //add it to the list of Nodes if it's at the right depth
         NODES.push(makeNode(nextNode['id'], nextNode['title']));
 
         if (nextNode['depth'] < depth){
+          debugger;
+          console.log('attempting to add children');
           //add some children
           var currentQueryString = makeYouTubeQuery(nextNode['id'],KEYTHINGY);
           $.get(currentQueryString, function(data){
@@ -73,7 +77,7 @@ var constructYouTubeTree = function(ytID, breadth, depth){
             console.log('received json data', data);
             var response = JSON.parse(data);
             var items = response.items;
-            var parentLocation = NODES.length;
+            var parentLocation = NODES.length-1;
             var childLocation = parentLocation+1;
             for (var i = 0 ; i < breadth; i++){
               queryQueue.push({
